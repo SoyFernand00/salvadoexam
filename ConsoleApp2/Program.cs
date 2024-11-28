@@ -102,11 +102,11 @@ do
             break;
             
         case 3:
-            Console.Write("El dato es (Numerico) o (Letra): ");
+            Console.Write("El dato es (numerico) o (letra): ");
             string usuario = Console.ReadLine().Trim().ToLower();
-            if (usuario == "Numerico")
+            if (usuario == "numerico")
             {
-                Console.Write("Ingresa el dato que Eliminaras: ");
+                Console.WriteLine("Ingresa el dato que Eliminaras: ");
                 int eliminar = int.Parse(Console.ReadLine());
                 foreach (int i in arreglopreciom)
                 {
@@ -117,17 +117,16 @@ do
                         Console.WriteLine("Se eliminara");
                         Console.Write("Ingresa el dato que modificaras: ");
                         int cambio = int.Parse(Console.ReadLine());
-                        for (int l = 0; i < respuesta; l++)
+                        for (int l = 0; l < respuesta; l++)
                         {
-                            if (arreglopreciom[i] == eliminar)
+                            if (arreglopreciom[l] == eliminar)
                             {
-                                arreglopreciom[i] = cambio;
+                                arreglopreciom[l] = cambio;
                                 Console.Write("El cambio fue realizado");
                             }
                         }
                     }
                 }
-                
                 foreach (int i in arreglopreciot)
                 {
                     if (i == eliminar)
@@ -139,9 +138,9 @@ do
                         int cambio = int.Parse(Console.ReadLine());
                         for (int o = 0; o < respuesta; o++)
                         {
-                            if (arreglopreciot[i] == eliminar)
+                            if (arreglopreciot[o] == eliminar)
                             {
-                                arreglopreciot[i] = cambio;
+                                arreglopreciot[o] = cambio;
                                 Console.Write("El cambio fue realizado");
                             }
                         }
@@ -149,8 +148,8 @@ do
                     }
                 }
             }
-                
-            if (usuario == "Letra")
+   
+            if (usuario == "letra")
             {
                 Console.Write("Ingresa el dato que deseas eliminar: ");
                 string eliminar1 = Console.ReadLine().Trim().ToLower();
